@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .body {
+        margin: 0px;
+      }
+      .center {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .wrapper {
+        width: 700px;
+        border-radius: 1rem;
+        color: white;
+        box-shadow: 5px 5px 5px 5px hsl(221, 100%, 96%);
+        font-family: Hanken Grotesk;
+      }
+      .flex {
+        display: flex;
+      }
+      .result {
+        flex-direction: column;
+
+        align-items: center;
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        border-radius: 1rem;
+        padding: 2rem;
+      }
+      .result h3 {
+        color: hsla(224, 30%, 27%, 0.662);
+      }
+      .circle {
+        width: 10rem;
+        height: 10rem;
+        background: linear-gradient(
+          hsla(256, 72%, 46%, 1),
+          hsla(241, 72%, 46%, 0)
+        );
+        border-radius: 50%;
+        text-align: center;
+      }
+      .circle h2 {
+        font-size: 3rem;
+        margin-bottom: 0px;
+      }
+      .circle p {
+        font-size: 18px;
+        color: hsla(224, 30%, 27%, 0.662);
+      }
+      .remarks {
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem 1rem;
+      }
+
+      .remarks > p:nth-child(1) {
+        font-size: 30px;
+        margin-bottom: 0rem;
+      }
+      .remarks > p:nth-child(2) {
+        text-align: center;
+      }
+      .summary {
+        flex-direction: column;
+
+        padding: 1.5em;
+      }
+      .summary h3 {
+        color: black;
+      }
+      .summary > div:nth-child(2) {
+        background-color: hsla(0, 100%, 67%, 0.151);
+      }
+      .summary > div:nth-child(2) .left {
+        color: hsl(0, 100%, 67%);
+      }
+      .summary > div:nth-child(3) {
+        background-color: hsl(39, 100%, 56%, 0.151);
+      }
+      .summary > div:nth-child(3) .left {
+        color: hsl(39, 100%, 56%);
+      }
+      .summary > div:nth-child(4) {
+        background-color: hsla(166, 100%, 37%, 0.151);
+      }
+      .summary > div:nth-child(4) .left {
+        color: hsl(166, 100%, 37%);
+      }
+      .summary > div:nth-child(5) {
+        background-color: hsla(234, 85%, 45%, 0.151);
+      }
+      .summary > div:nth-child(5) .left {
+        color: hsl(234, 85%, 45%);
+      }
+      .btn-continue {
+        margin-top: 1rem;
+        cursor: pointer;
+        border: none;
+        background-color: hsl(224, 30%, 27%);
+        color: white;
+        padding: 1rem;
+        font-size: 18px;
+        border-radius: 2rem;
+      }
+      .right :nth-child(2) {
+        color: hsla(224, 30%, 27%, 0.405);
+      }
+      .right :nth-child(3) {
+        color: hsla(224, 30%, 27%, 0.405);
+      }
+      .bold {
+        color: hsl(224, 30%, 27%);
+        font-weight: 700;
+      }
+      .tab {
+        justify-content: space-between;
+        border: none;
+        gap: 3rem;
+        border-radius: 1rem;
+        padding: 0rem 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .left {
+        gap: 1rem;
+      }
+      .right {
+        gap: 0.5rem;
+      }
+
+      @media (max-width: 500px) {
+        .center {
+          height: 1050px;
+          width: auto;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        .wrapper {
+          flex-direction: column;
+          box-shadow: none;
+        }
+        .result {
+          border-radius: 0rem 0rem 1rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="wrapper flex">
+        <div class="result flex">
+          <h3>Your Result</h3>
+          <div class="circle">
+            <h2>76</h2>
+            <p>of 100</p>
+          </div>
+          <div class="remarks flex">
+            <p>Great</p>
+            <p>
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </div>
+        <div class="summary flex">
+          <h3>Summary</h3>
+          <div class="tab flex">
+            <div class="left flex">
+              <img src="./assets/images/icon-reaction.svg" alt="" />
+              <p>Reaction</p>
+            </div>
+            <div class="right flex">
+              <p class="bold">80</p>
+              <p>/</p>
+              <p>100</p>
+            </div>
+          </div>
+          <div class="tab flex">
+            <div class="left flex">
+              <img src="./assets/images/icon-memory.svg" alt="" />
+              <p>Memory</p>
+            </div>
+            <div class="right flex">
+              <p class="bold">92</p>
+              <p>/</p>
+              <p>100</p>
+            </div>
+          </div>
+          <div class="tab flex">
+            <div class="left flex">
+              <img src="./assets/images/icon-verbal.svg" alt="" />
+              <p>Verbal</p>
+            </div>
+            <div class="right flex">
+              <p class="bold">61</p>
+              <p>/</p>
+              <p>100</p>
+            </div>
+          </div>
+          <div class="tab flex">
+            <div class="left flex">
+              <img src="./assets/images/icon-visual.svg" alt="" />
+              <p>Visual</p>
+            </div>
+            <div class="right flex">
+              <p class="bold">72</p>
+              <p>/</p>
+              <p>100</p>
+            </div>
+          </div>
+          <button class="btn-continue">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Antarpreet Kaur</a>.
+    </div>
+  </body>
+</html>
